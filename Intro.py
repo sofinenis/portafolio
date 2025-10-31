@@ -83,9 +83,9 @@ titles = [
 ]
 
 images = [
-    "img/txt_to_audio2.png", "img/txt_to_audio.png", "img/OIG5.jpg", "img/OIG8.jpg", "img/data_analisis.png",
-    "img/OIG3.jpg", "img/Chat_pdf.png", "img/OIG4.jpg", "img/OIG6.jpg", "img/OIG7.jpg",
-    "img/OIG9.jpg", "img/OIG10.jpg", "img/OIG11.jpg", "img/OIG12.jpg", "img/OIG13.jpg"
+    "girasol.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg",
+    "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg",
+    "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg"
 ]
 
 links = [
