@@ -89,8 +89,8 @@ images = [
 ]
 
 links = [
-    "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/", "https://traductoor.streamlit.app/", "https://imagenaudio.streamlit.app/",
-    "https://imagenaudiocoso.streamlit.app/", "https://textancis.streamlit.app/", "https://transcript-whisper.streamlit.app/",
+    "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/", "https://traductoor.streamlit.app/", "https://czccmjdyybe6oau4svuczk.streamlit.app/",
+    "a/", "a", "a/",
     "a", "a/", "a/",
     "a", "ar", "a", "a",
     "a", "a"
