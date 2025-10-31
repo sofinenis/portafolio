@@ -3,7 +3,7 @@ import streamlit as st
 # ==============================
 # CONFIGURACIÓN GENERAL
 # ==============================
-st.set_page_config(page_title="🌻 Aplicaciones IA - Tema Floral", page_icon="🌼", layout="wide")
+st.set_page_config(page_title="🌻 Multimodales", page_icon="🌼", layout="wide")
 
 # ==============================
 # ESTILOS - TEMA FLORAL GIRASOL
@@ -66,8 +66,8 @@ p {
 # ==============================
 st.markdown("""
 <div style="border:3px solid #f6c700; border-radius:15px; padding:20px; background-color:#fffbea; text-align:center;">
-    <h1>🌻 Aplicaciones Creativas con Inteligencia Artificial 🌻</h1>
-    <p>Explora 15 herramientas de IA inspiradas en la naturaleza, la creatividad y los girasoles 🌼</p>
+    <h1>🌻 Portafolio - Multimodales 🌻</h1>
+
 </div>
 """, unsafe_allow_html=True)
 
