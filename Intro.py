@@ -1,4 +1,5 @@
 import streamlit as st
+from pathlib import Path
 
 # ==============================
 # CONFIGURACIÓN GENERAL
@@ -74,47 +75,51 @@ st.markdown("""
 st.write("")
 
 # ==============================
-# DATOS DE LAS 15 TARJETAS
+# CONFIGURAR RUTA DE IMÁGENES
 # ==============================
-base_url = "https://raw.githubusercontent.com/tuusuario/mi-proyecto/main/images/"
+img_dir = Path(__file__).parent / "images"  # asegúrate que exista la carpeta "images" junto al .py
 
 titles = [
-    "Intro", "Traductor", "texto a voz", "Reconocimiento de imagen", "Analisis de sentimiento",
-    "Analisis de texto ESP", "Analisis texto ING", "Reconocimiento de objetos", "Reconocimiento de gestos", "Chat PDF",
-    "Interpretracion de imagen", "Interfaz táctil", "Bocetos", "Lector MQTT", "Control por Voz"
+    "Intro", "Traductor", "Texto a voz", "Reconocimiento de imagen", "Análisis de sentimiento",
+    "Análisis de texto ESP", "Análisis texto ING", "Reconocimiento de objetos", "Reconocimiento de gestos", "Chat PDF",
+    "Interpretación de imagen", "Interfaz táctil", "Bocetos", "Lector MQTT", "Control por Voz"
 ]
 
 images = [
-    f"{base_url}girasol.jpg", f"{base_url}1.jpg", f"{base_url}2.jpg", f"{base_url}3.jpg", f"{base_url}4.jpg",
-    f"{base_url}5.jpg", f"{base_url}6.jpg", f"{base_url}7.jpg", f"{base_url}8.jpg", f"{base_url}9.jpg",
-    f"{base_url}10.jpg", f"{base_url}11.jpg", f"{base_url}12.jpg", f"{base_url}13.jpg", f"{base_url}14.jpg"
+    "girasol.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg",
+    "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg",
+    "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg"
 ]
 
 links = [
     "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/", "https://traductoor.streamlit.app/", "https://czccmjdyybe6oau4svuczk.streamlit.app/",
     "https://imagenaudiocoso.streamlit.app/", "https://anlisisdetexto.streamlit.app/", "https://tdfesppp.streamlit.app/",
-    "Reconocimiento de objetos", "https://textancis.streamlit.app/", "https://yolovv5.streamlit.app/",
-    "https://yolovv5.streamlit.app/", "https://tmreconocimiento.streamlit.app/", "https://tableronumero.streamlit.app/", "https://dibujo.streamlit.app/",
-    "https://recepmqttsofi.streamlit.app/", "https://ctrlvoicee.streamlit.app/"
+    "https://textancis.streamlit.app/", "https://yolovv5.streamlit.app/", "https://tmreconocimiento.streamlit.app/",
+    "https://tableronumero.streamlit.app/", "https://dibujo.streamlit.app/", "https://recepmqttsofi.streamlit.app/", 
+    "https://ctrlvoicee.streamlit.app/", "https://textancis.streamlit.app/", "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/"
 ]
 
 # ==============================
-# CREAR TARJETAS (15 ELEMENTOS, 3 FILAS DE 5 COLUMNAS)
+# MOSTRAR LAS 15 TARJETAS (5 columnas × 3 filas)
 # ==============================
 index = 0
 for fila in range(3):
-    col1, col2, col3, col4, col5 = st.columns(5)
-    for col in [col1, col2, col3, col4, col5]:
+    cols = st.columns(5)
+    for col in cols:
         if index < len(titles):
+            img_path = img_dir / images[index]
             with col:
-                st.markdown(
-                    f"""
-                    <div class="card">
-                        <img src="{images[index]}" alt="{titles[index]}">
-                        <h4>{titles[index]}</h4>
-                        <a href="{links[index]}" target="_blank">Enlace</a>
-                    </div>
-                    """,
-                    unsafe_allow_html=True
-                )
+                if img_path.exists():
+                    st.markdown(
+                        f"""
+                        <div class="card">
+                            <img src="data:image/jpg;base64,{(img_path.read_bytes()).hex()}" alt="{titles[index]}">
+                            <h4>{titles[index]}</h4>
+                            <a href="{links[index]}" target="_blank">Enlace</a>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )
+                else:
+                    st.warning(f"⚠ No se encontró la imagen: {images[index]}")
             index += 1
