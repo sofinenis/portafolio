@@ -111,7 +111,7 @@ links = [
     "https://yolovv5.streamlit.app/",
     "https://textancis.streamlit.app/",
     "https://visionappp.streamlit.app/",
-    "https://yolovv5.streamlit.app/",
+    "https://chatpdfsofi.streamlit.app/",
     "https://tmreconocimiento.streamlit.app/",
     "https://tableronumero.streamlit.app/",
     "https://dibujo.streamlit.app/",
