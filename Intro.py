@@ -78,7 +78,7 @@ st.write("")  # Espacio visual
 # ==============================
 titles = [
     "Intro", "Traductor", "Texto a voz", "Reconocimiento de imagen", "Análisis de sentimiento",
-    "Análisis de texto ESP", "Análisis texto ING", "Reconocimiento de objetos",
+    "Análisis de texto ESP", "Reconocimiento de objetos", "Análisis texto ING",
     "Reconocimiento de gestos", "Chat PDF", "Interpretación de imagen", "Interfaz táctil",
     "Bocetos", "Lector MQTT", "Control por Voz"
 ]
@@ -108,15 +108,15 @@ links = [
     "https://imagenaudiocoso.streamlit.app/",
     "https://anlisisdetexto.streamlit.app/",
     "https://tdfesppp.streamlit.app/",
+    "Reconocimiento de objetos",
     "https://textancis.streamlit.app/",
+    "https://yolovv5.streamlit.app/",
     "https://yolovv5.streamlit.app/",
     "https://tmreconocimiento.streamlit.app/",
     "https://tableronumero.streamlit.app/",
     "https://dibujo.streamlit.app/",
     "https://recepmqttsofi.streamlit.app/",
-    "https://ctrlvoicee.streamlit.app/",
-    "https://textancis.streamlit.app/",
-    "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/"
+    "https://ctrlvoicee.streamlit.app/"
 ]
 
 # ==============================
@@ -128,12 +128,13 @@ for fila in range(3):
     for col in [col1, col2, col3, col4, col5]:
         if index < len(titles):
             with col:
+                enlace = links[index] if links[index].startswith("http") else "#"
                 st.markdown(
                     f"""
                     <div class="card">
                         <img src="{images[index]}" alt="{titles[index]}">
                         <h4>{titles[index]}</h4>
-                        <a href="{links[index]}" target="_blank">Enlace</a>
+                        <a href="{enlace}" target="_blank">{'Enlace' if enlace != '#' else 'Sin enlace'}</a>
                     </div>
                     """,
                     unsafe_allow_html=True
