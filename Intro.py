@@ -1,87 +1,118 @@
 import streamlit as st
-from PIL import Image
-st.title("Aplicaciones de Inteligencia Artificial.")
 
-with st.sidebar:
-  st.subheader("Aplicaciones con Inteligencia Artificial.")
-  parrafo = (
-    "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
-    "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
-    "resulta en una mayor eficiencia y precisión en diversos campos."
-  )
-  st.write(parrafo)
+# ==============================
+# CONFIGURACIÓN GENERAL
+# ==============================
+st.set_page_config(page_title="🌻 Aplicaciones IA - Tema Floral", page_icon="🌼", layout="wide")
 
-url_ia="https://sites.google.com/view/aplicacionesdeia/inicio"
-st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
-st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
-col1, col2, col3 = st.columns(3)
+# ==============================
+# ESTILOS - TEMA FLORAL GIRASOL
+# ==============================
+st.markdown("""
+<style>
+.stApp {
+    background: linear-gradient(180deg, #fff8dc 0%, #fff3b0 50%, #f9f7ef 100%);
+    color: #4a3000;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+h1, h2, h3 {
+    color: #5a3e00 !important;
+    text-align: center;
+    font-weight: bold;
+}
+p {
+    color: #6a4a00;
+    text-align: center;
+}
+.card {
+    border: 3px solid #f6c700;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #fff9e6;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(200,150,0,0.2);
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+.card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 14px rgba(230,180,0,0.3);
+    background-color: #fff4d6;
+}
+.card img {
+    border-radius: 12px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid #ffd700;
+}
+.card h4 {
+    margin-top: 10px;
+    color: #5c4000;
+}
+.card a {
+    color: #d97706 !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+.card a:hover {
+    color: #b45309 !important;
+    text-decoration: underline;
+}
+</style>
+""", unsafe_allow_html=True)
 
-with col1:
- 
- st.subheader("Conversión de texto a voz")
- image = Image.open('txt_to_audio2.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace usaremos una de las aplicaciones de Inteligencia Artificial") 
- url = "https://imultimod.streamlit.app/"
- st.write(f"Texto a voz: [Enlace]({url})")
+# ==============================
+# TÍTULO PRINCIPAL
+# ==============================
+st.markdown("""
+<div style="border:3px solid #f6c700; border-radius:15px; padding:20px; background-color:#fffbea; text-align:center;">
+    <h1>🌻 Aplicaciones Creativas con Inteligencia Artificial 🌻</h1>
+    <p>Explora 15 herramientas de IA inspiradas en la naturaleza, la creatividad y los girasoles 🌼</p>
+</div>
+""", unsafe_allow_html=True)
 
- st.subheader("Reconocimiento de Objetos")
- image = Image.open('txt_to_audio.png')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como se detectan objetos en Imágenes.") 
- url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
+st.write("")  # Espacio visual
 
- st.subheader("Entrenando Modelos")
- image = Image.open('OIG5.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como puedes usar tu modelo entrenado.") 
- url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
+# ==============================
+# DATOS DE LAS 15 TARJETAS
+# ==============================
+titles = [
+    "Conversión de Texto a Voz", "Reconocimiento de Objetos", "Entrenando Modelos", "Conversión de Voz a Texto", "Análisis de Datos",
+    "Transcriptor Audio/Video", "Generación en Contexto", "Análisis de Imagen", "Sistema Ciberfísico", "Asistente de Chat",
+    "Traductor Automático", "Generador de Imágenes", "Clasificador de Datos", "Detección de Sentimientos", "Asistente de Código"
+]
 
-with col2: 
- st.subheader("Conversión de voz a texto")
- image = Image.open('OIG8.jpg')
- st.image(image, width=200)
- st.write("En la siguiente veremos una aplicación que usa la conversión de voz a texto.") 
- url = "https://traductor-ab0sp9f6fi.streamlit.app/"
- st.write(f"Voz a texto: [Enlace]({url})")
+images = [
+    "img/txt_to_audio2.png", "img/txt_to_audio.png", "img/OIG5.jpg", "img/OIG8.jpg", "img/data_analisis.png",
+    "img/OIG3.jpg", "img/Chat_pdf.png", "img/OIG4.jpg", "img/OIG6.jpg", "img/OIG7.jpg",
+    "img/OIG9.jpg", "img/OIG10.jpg", "img/OIG11.jpg", "img/OIG12.jpg", "img/OIG13.jpg"
+]
 
- st.subheader("Análisis de Datos")
- image = Image.open('data_analisis.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace veremos como se pueden analizar datos usando agentes.") 
- url = "https://asistpy-csv.streamlit.app/"
- st.write(f"Datos: [Enlace]({url})")
+links = [
+    "https://imultimod.streamlit.app/", "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/", "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/",
+    "https://traductor-ab0sp9f6fi.streamlit.app/", "https://asistpy-csv.streamlit.app/", "https://transcript-whisper.streamlit.app/",
+    "https://chatpdf-cc.streamlit.app/", "https://vision2-gpt4o.streamlit.app/", "https://vision2-gpt4o.streamlit.app/",
+    "https://chat.openai.com/", "https://www.deepl.com/translator", "https://openai.com/dall-e", "https://huggingface.co/",
+    "https://text2emotion.streamlit.app/", "https://github.com/features/copilot"
+]
 
- st.subheader("Trasnscriptor Audio y Video")
- image = Image.open('OIG3.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como realizamos transcripciones de audio/video.") 
- url = "https://transcript-whisper.streamlit.app/"
- st.write(f"Transcriptor: [Enlace]({url})")
-
-
-with col3: 
- st.subheader("Generación en Contexto")
- image = Image.open('Chat_pdf.png')
- st.image(image, width=190)
- st.write("En la siguiente veremos una aplicación que usa RAG a partir de un documento (PDF).") 
- url = "https://chatpdf-cc.streamlit.app/"
- st.write(f"RAG: [Enlace]({url})")
-
- st.subheader("Análisis de Imagen")
- image = Image.open('OIG4.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de análisis en Imágenes.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
- 
- st.subheader("Sistema Ciberfísico")
- image = Image.open('OIG6.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de interacción con el mundo físico.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
-
-
+# ==============================
+# CREAR TARJETAS (15 ELEMENTOS, 3 FILAS DE 5 COLUMNAS)
+# ==============================
+index = 0
+for fila in range(3):
+    col1, col2, col3, col4, col5 = st.columns(5)
+    for col in [col1, col2, col3, col4, col5]:
+        if index < len(titles):
+            with col:
+                st.markdown(
+                    f"""
+                    <div class="card">
+                        <img src="{images[index]}" alt="{titles[index]}">
+                        <h4>{titles[index]}</h4>
+                        <a href="{links[index]}" target="_blank">Enlace</a>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+            index += 1
