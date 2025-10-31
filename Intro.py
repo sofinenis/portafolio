@@ -1,5 +1,4 @@
 import streamlit as st
-from pathlib import Path
 
 # ==============================
 # CONFIGURACIÓN GENERAL
@@ -75,51 +74,47 @@ st.markdown("""
 st.write("")
 
 # ==============================
-# CONFIGURAR RUTA DE IMÁGENES
+# DATOS DE LAS 15 TARJETAS
 # ==============================
-img_dir = Path(__file__).parent / "images"  # asegúrate que exista la carpeta "images" junto al .py
+base_url = "https://raw.githubusercontent.com/tuusuario/mi-proyecto/main/images/"
 
 titles = [
-    "Intro", "Traductor", "Texto a voz", "Reconocimiento de imagen", "Análisis de sentimiento",
-    "Análisis de texto ESP", "Análisis texto ING", "Reconocimiento de objetos", "Reconocimiento de gestos", "Chat PDF",
-    "Interpretación de imagen", "Interfaz táctil", "Bocetos", "Lector MQTT", "Control por Voz"
+    "Intro", "Traductor", "texto a voz", "Reconocimiento de imagen", "Analisis de sentimiento",
+    "Analisis de texto ESP", "Analisis texto ING", "Reconocimiento de objetos", "Reconocimiento de gestos", "Chat PDF",
+    "Interpretracion de imagen", "Interfaz táctil", "Bocetos", "Lector MQTT", "Control por Voz"
 ]
 
 images = [
-    "girasol.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg",
-    "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg",
-    "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg"
+    f"{base_url}girasol.jpg", f"{base_url}1.jpg", f"{base_url}2.jpg", f"{base_url}3.jpg", f"{base_url}4.jpg",
+    f"{base_url}5.jpg", f"{base_url}6.jpg", f"{base_url}7.jpg", f"{base_url}8.jpg", f"{base_url}9.jpg",
+    f"{base_url}10.jpg", f"{base_url}11.jpg", f"{base_url}12.jpg", f"{base_url}13.jpg", f"{base_url}14.jpg"
 ]
 
 links = [
     "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/", "https://traductoor.streamlit.app/", "https://czccmjdyybe6oau4svuczk.streamlit.app/",
     "https://imagenaudiocoso.streamlit.app/", "https://anlisisdetexto.streamlit.app/", "https://tdfesppp.streamlit.app/",
-    "https://textancis.streamlit.app/", "https://yolovv5.streamlit.app/", "https://tmreconocimiento.streamlit.app/",
-    "https://tableronumero.streamlit.app/", "https://dibujo.streamlit.app/", "https://recepmqttsofi.streamlit.app/", 
-    "https://ctrlvoicee.streamlit.app/", "https://textancis.streamlit.app/", "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/"
+    "Reconocimiento de objetos", "https://textancis.streamlit.app/", "https://yolovv5.streamlit.app/",
+    "https://yolovv5.streamlit.app/", "https://tmreconocimiento.streamlit.app/", "https://tableronumero.streamlit.app/", "https://dibujo.streamlit.app/",
+    "https://recepmqttsofi.streamlit.app/", "https://ctrlvoicee.streamlit.app/"
 ]
 
 # ==============================
-# MOSTRAR LAS 15 TARJETAS (5 columnas × 3 filas)
+# CREAR TARJETAS (15 ELEMENTOS, 3 FILAS DE 5 COLUMNAS)
 # ==============================
 index = 0
 for fila in range(3):
-    cols = st.columns(5)
-    for col in cols:
+    col1, col2, col3, col4, col5 = st.columns(5)
+    for col in [col1, col2, col3, col4, col5]:
         if index < len(titles):
-            img_path = img_dir / images[index]
             with col:
-                if img_path.exists():
-                    st.markdown(
-                        f"""
-                        <div class="card">
-                            <img src="data:image/jpg;base64,{(img_path.read_bytes()).hex()}" alt="{titles[index]}">
-                            <h4>{titles[index]}</h4>
-                            <a href="{links[index]}" target="_blank">Enlace</a>
-                        </div>
-                        """,
-                        unsafe_allow_html=True
-                    )
-                else:
-                    st.warning(f"⚠ No se encontró la imagen: {images[index]}")
+                st.markdown(
+                    f"""
+                    <div class="card">
+                        <img src="{images[index]}" alt="{titles[index]}">
+                        <h4>{titles[index]}</h4>
+                        <a href="{links[index]}" target="_blank">Enlace</a>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
             index += 1
