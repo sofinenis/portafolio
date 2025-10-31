@@ -1,52 +1,88 @@
 import streamlit as st
 
-st.set_page_config(page_title="Galería de Ejercicios - Flores", layout="wide")
+# ==============================
+# CONFIGURACIÓN GENERAL
+# ==============================
+st.set_page_config(page_title="🌻 Aplicaciones IA - Tema Floral", page_icon="🌼", layout="wide")
 
+# ==============================
+# ESTILOS - TEMA FLORAL GIRASOL
+# ==============================
 st.markdown("""
-    <style>
-    body {
-        background-color: #fff7e6;
-        color: #3e2f1c;
-    }
-    .title {
-        text-align: center;
-        font-size: 2.5em;
-        color: #d18b00;
-        margin-bottom: 20px;
-        font-weight: bold;
-    }
-    .card {
-        background-color: #fff8f0;
-        border-radius: 15px;
-        box-shadow: 0px 4px 10px rgba(200, 150, 50, 0.3);
-        padding: 10px;
-        text-align: center;
-        transition: all 0.3s ease;
-    }
-    .card:hover {
-        transform: scale(1.03);
-        box-shadow: 0px 6px 15px rgba(180, 130, 20, 0.4);
-    }
-    img {
-        border-radius: 10px;
-        margin-bottom: 8px;
-        border: 2px solid #f3d673;
-    }
-    h4 {
-        color: #d8a100;
-        margin-bottom: 5px;
-    }
-    code {
-        background-color: #fff0d1;
-        padding: 5px;
-        border-radius: 8px;
-    }
-    </style>
+<style>
+.stApp {
+    background: linear-gradient(180deg, #fff8dc 0%, #fff3b0 50%, #f9f7ef 100%);
+    color: #4a3000;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+h1, h2, h3 {
+    color: #5a3e00 !important;
+    text-align: center;
+    font-weight: bold;
+}
+p {
+    color: #6a4a00;
+    text-align: center;
+}
+.card {
+    border: 3px solid #f6c700;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #fff9e6;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(200,150,0,0.2);
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+.card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 14px rgba(230,180,0,0.3);
+    background-color: #fff4d6;
+}
+.card img {
+    border-radius: 12px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid #ffd700;
+}
+.card h4 {
+    margin-top: 10px;
+    color: #5c4000;
+}
+.card a {
+    color: #d97706 !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+.card a:hover {
+    color: #b45309 !important;
+    text-decoration: underline;
+}
+</style>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="title">🌻 Galería de Ejercicios - Tema de Flores 🌻</div>', unsafe_allow_html=True)
+# ==============================
+# TÍTULO PRINCIPAL
+# ==============================
+st.markdown("""
+<div style="border:3px solid #f6c700; border-radius:15px; padding:20px; background-color:#fffbea; text-align:center;">
+    <h1>🌻 Aplicaciones Creativas con Inteligencia Artificial 🌻</h1>
+    <p>Explora 15 herramientas de IA inspiradas en la naturaleza, la creatividad y los girasoles 🌼</p>
+</div>
+""", unsafe_allow_html=True)
 
-# Lista de imágenes desde GitHub (puedes cambiar los nombres si tus archivos son png/jpg diferentes)
+st.write("")  # Espacio visual
+
+# ==============================
+# DATOS DE LAS 15 TARJETAS
+# ==============================
+titles = [
+    "Intro", "Traductor", "Texto a voz", "Reconocimiento de imagen", "Análisis de sentimiento",
+    "Análisis de texto ESP", "Análisis texto ING", "Reconocimiento de objetos",
+    "Reconocimiento de gestos", "Chat PDF", "Interpretación de imagen", "Interfaz táctil",
+    "Bocetos", "Lector MQTT", "Control por Voz"
+]
+
 images = [
     "https://raw.githubusercontent.com/sofinenis/portafolio/main/1.jpg",
     "https://raw.githubusercontent.com/sofinenis/portafolio/main/2.jpg",
@@ -62,23 +98,44 @@ images = [
     "https://raw.githubusercontent.com/sofinenis/portafolio/main/12.jpg",
     "https://raw.githubusercontent.com/sofinenis/portafolio/main/13.jpg",
     "https://raw.githubusercontent.com/sofinenis/portafolio/main/14.jpg",
-    "https://raw.githubusercontent.com/sofinenis/portafolio/main/girasol.jpg"  
+    "https://raw.githubusercontent.com/sofinenis/portafolio/main/girasol.jpg"
 ]
 
+links = [
+    "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/",
+    "https://traductoor.streamlit.app/",
+    "https://czccmjdyybe6oau4svuczk.streamlit.app/",
+    "https://imagenaudiocoso.streamlit.app/",
+    "https://anlisisdetexto.streamlit.app/",
+    "https://tdfesppp.streamlit.app/",
+    "https://textancis.streamlit.app/",
+    "https://yolovv5.streamlit.app/",
+    "https://tmreconocimiento.streamlit.app/",
+    "https://tableronumero.streamlit.app/",
+    "https://dibujo.streamlit.app/",
+    "https://recepmqttsofi.streamlit.app/",
+    "https://ctrlvoicee.streamlit.app/",
+    "https://textancis.streamlit.app/",
+    "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/"
+]
 
-titles = [f"Ejercicio {i+1}" for i in range(15)]
-codes = [f"Código {i+1}" for i in range(15)]
-
-cols_per_row = 5
-for i in range(0, len(images), cols_per_row):
-    cols = st.columns(cols_per_row)
-    for idx, col in enumerate(cols):
-        if i + idx < len(images):
+# ==============================
+# CREAR TARJETAS (15 ELEMENTOS, 3 FILAS DE 5 COLUMNAS)
+# ==============================
+index = 0
+for fila in range(3):
+    col1, col2, col3, col4, col5 = st.columns(5)
+    for col in [col1, col2, col3, col4, col5]:
+        if index < len(titles):
             with col:
-                st.markdown(f"""
+                st.markdown(
+                    f"""
                     <div class="card">
-                        <img src="{images[i+idx]}" width="100%" />
-                        <h4>{titles[i+idx]}</h4>
-                        <code>{codes[i+idx]}</code>
+                        <img src="{images[index]}" alt="{titles[index]}">
+                        <h4>{titles[index]}</h4>
+                        <a href="{links[index]}" target="_blank">Enlace</a>
                     </div>
-                """, unsafe_allow_html=True)
+                    """,
+                    unsafe_allow_html=True
+                )
+            index += 1
