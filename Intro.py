@@ -92,8 +92,8 @@ links = [
     "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/", "https://traductoor.streamlit.app/", "https://czccmjdyybe6oau4svuczk.streamlit.app/",
     "https://imagenaudiocoso.streamlit.app/", "https://anlisisdetexto.streamlit.app/", "https://tdfesppp.streamlit.app/",
     "Reconocimiento de objetos", "https://textancis.streamlit.app/", "https://yolovv5.streamlit.app/",
-    "https://yolovv5.streamlit.app/", "https://tmreconocimiento.streamlit.app/", "https://tmreconocimiento.streamlit.app/", "https://tableronumero.streamlit.app/",
-    "https://dibujo.streamlit.app/", "a"
+    "https://yolovv5.streamlit.app/", "https://tmreconocimiento.streamlit.app/", "https://tableronumero.streamlit.app/", "https://dibujo.streamlit.app/",
+    "ha", "a"
 ]
 
 # ==============================
