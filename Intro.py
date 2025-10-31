@@ -62,9 +62,9 @@ images = [
     "https://raw.githubusercontent.com/sofinenis/portafolio/main/12.jpg",
     "https://raw.githubusercontent.com/sofinenis/portafolio/main/13.jpg",
     "https://raw.githubusercontent.com/sofinenis/portafolio/main/14.jpg",
-    "https://raw.githubusercontent.com/sofinenis/portafolio/main/15.jpg"
-    "https://raw.githubusercontent.com/sofinenis/portafolio/main/girasol.jpg"
+    "https://raw.githubusercontent.com/sofinenis/portafolio/main/girasol.jpg"  
 ]
+
 
 titles = [f"Ejercicio {i+1}" for i in range(15)]
 codes = [f"Código {i+1}" for i in range(15)]
