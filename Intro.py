@@ -93,7 +93,7 @@ links = [
     "https://imagenaudiocoso.streamlit.app/", "https://anlisisdetexto.streamlit.app/", "https://tdfesppp.streamlit.app/",
     "Reconocimiento de objetos", "https://textancis.streamlit.app/", "https://yolovv5.streamlit.app/",
     "https://yolovv5.streamlit.app/", "https://tmreconocimiento.streamlit.app/", "https://tableronumero.streamlit.app/", "https://dibujo.streamlit.app/",
-    "ha", "a"
+    "https://recepmqttsofi.streamlit.app/", "https://ctrlvoicee.streamlit.app/"
 ]
 
 # ==============================
