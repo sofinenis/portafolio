@@ -77,9 +77,9 @@ st.write("")  # Espacio visual
 # DATOS DE LAS 15 TARJETAS
 # ==============================
 titles = [
-    "Intro", "Traductor", "texto a voz", "Conversión de Voz a Texto", "OCR Imangen",
-    "OCR Texto", "Analisis de sentimiento", "Analisis texto Esp", "Sistema Ciberfísico", "Asistente de Chat",
-    "Traductor Automático", "Generador de Imágenes", "Clasificador de Datos", "Detección de Sentimientos", "Asistente de Código"
+    "Intro", "Traductor", "texto a voz", "Reconocimiento de imagen", "Analisis de sentimiento",
+    "Analisis de texto ESP", "Analisis texto ING", "Reconocimiento de objetos", "Reconocimiento de gestos", "Chat PDF",
+    "Interpretracion de imagen", "Interfaz táctil", "Bocetos", "Lector MQTT", "Control por Voz"
 ]
 
 images = [
@@ -90,8 +90,8 @@ images = [
 
 links = [
     "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/", "https://traductoor.streamlit.app/", "https://czccmjdyybe6oau4svuczk.streamlit.app/",
-    "a/", "a", "a/",
-    "a", "a/", "a/",
+    "Reconocimiento de imagenaaa", "Analisis texto ESP", "Analisis texto ING",
+    "Reconocimiento de objetos", "a/", "a/",
     "a", "ar", "a", "a",
     "a", "a"
 ]
