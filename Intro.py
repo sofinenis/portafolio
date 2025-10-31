@@ -90,7 +90,7 @@ images = [
 
 links = [
     "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/", "https://traductoor.streamlit.app/", "https://czccmjdyybe6oau4svuczk.streamlit.app/",
-    "Reconocimiento de imagenaaa", "Analisis texto ESP", "Analisis texto ING",
+    "https://imagenaudio.streamlit.app/", "https://textancis.streamlit.app/", "Analisis texto ING",
     "Reconocimiento de objetos", "a/", "a/",
     "a", "ar", "a", "a",
     "a", "a"
