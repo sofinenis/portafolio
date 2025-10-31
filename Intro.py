@@ -77,8 +77,8 @@ st.write("")  # Espacio visual
 # DATOS DE LAS 15 TARJETAS
 # ==============================
 titles = [
-    "Conversión de Texto a Voz", "Reconocimiento de Objetos", "Entrenando Modelos", "Conversión de Voz a Texto", "Análisis de Datos",
-    "Transcriptor Audio/Video", "Generación en Contexto", "Análisis de Imagen", "Sistema Ciberfísico", "Asistente de Chat",
+    "Intro", "Traductor", "texto a voz", "Conversión de Voz a Texto", "OCR Imangen",
+    "OCR Texto", "Analisis de sentimiento", "Analisis texto Esp", "Sistema Ciberfísico", "Asistente de Chat",
     "Traductor Automático", "Generador de Imágenes", "Clasificador de Datos", "Detección de Sentimientos", "Asistente de Código"
 ]
 
@@ -89,11 +89,11 @@ images = [
 ]
 
 links = [
-    "https://imultimod.streamlit.app/", "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/", "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/",
-    "https://traductor-ab0sp9f6fi.streamlit.app/", "https://asistpy-csv.streamlit.app/", "https://transcript-whisper.streamlit.app/",
-    "https://chatpdf-cc.streamlit.app/", "https://vision2-gpt4o.streamlit.app/", "https://vision2-gpt4o.streamlit.app/",
-    "https://chat.openai.com/", "https://www.deepl.com/translator", "https://openai.com/dall-e", "https://huggingface.co/",
-    "https://text2emotion.streamlit.app/", "https://github.com/features/copilot"
+    "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/", "https://traductoor.streamlit.app/", "https://imagenaudio.streamlit.app/",
+    "https://imagenaudiocoso.streamlit.app/", "https://textancis.streamlit.app/", "https://transcript-whisper.streamlit.app/",
+    "a", "a/", "a/",
+    "a", "ar", "a", "a",
+    "a", "a"
 ]
 
 # ==============================
