@@ -90,8 +90,8 @@ images = [
 
 links = [
     "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/", "https://traductoor.streamlit.app/", "https://czccmjdyybe6oau4svuczk.streamlit.app/",
-    "a", "a", "a",
-    "Reconocimiento de objetos", "a/", "a/",
+    "https://imagenaudiocoso.streamlit.app/", "https://anlisisdetexto.streamlit.app/", "https://tdfesppp.streamlit.app/",
+    "Reconocimiento de objetos", "https://textancis.streamlit.app/", "a/",
     "a", "ar", "a", "a",
     "a", "a"
 ]
