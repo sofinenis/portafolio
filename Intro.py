@@ -1,5 +1,4 @@
 import streamlit as st
-from pathlib import Path
 
 # ==============================
 # CONFIGURACIÓN GENERAL
@@ -72,13 +71,11 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.write("")
+st.write("")  # Espacio visual
 
 # ==============================
-# CONFIGURAR RUTA DE IMÁGENES
+# DATOS DE LAS 15 TARJETAS
 # ==============================
-img_dir = Path(__file__).parent / "images"  # asegúrate que exista la carpeta "images" junto al .py
-
 titles = [
     "Intro", "Traductor", "Texto a voz", "Reconocimiento de imagen", "Análisis de sentimiento",
     "Análisis de texto ESP", "Análisis texto ING", "Reconocimiento de objetos", "Reconocimiento de gestos", "Chat PDF",
@@ -92,34 +89,40 @@ images = [
 ]
 
 links = [
-    "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/", "https://traductoor.streamlit.app/", "https://czccmjdyybe6oau4svuczk.streamlit.app/",
-    "https://imagenaudiocoso.streamlit.app/", "https://anlisisdetexto.streamlit.app/", "https://tdfesppp.streamlit.app/",
-    "https://textancis.streamlit.app/", "https://yolovv5.streamlit.app/", "https://tmreconocimiento.streamlit.app/",
-    "https://tableronumero.streamlit.app/", "https://dibujo.streamlit.app/", "https://recepmqttsofi.streamlit.app/", 
-    "https://ctrlvoicee.streamlit.app/", "https://textancis.streamlit.app/", "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/"
+    "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/",
+    "https://traductoor.streamlit.app/",
+    "https://czccmjdyybe6oau4svuczk.streamlit.app/",
+    "https://imagenaudiocoso.streamlit.app/",
+    "https://anlisisdetexto.streamlit.app/",
+    "https://tdfesppp.streamlit.app/",
+    "https://textancis.streamlit.app/",
+    "https://yolovv5.streamlit.app/",
+    "https://tmreconocimiento.streamlit.app/",
+    "https://tableronumero.streamlit.app/",
+    "https://dibujo.streamlit.app/",
+    "https://recepmqttsofi.streamlit.app/",
+    "https://ctrlvoicee.streamlit.app/",
+    "https://textancis.streamlit.app/",
+    "https://primerappjloqbfg8ikzs4ca7ke.streamlit.app/"
 ]
 
 # ==============================
-# MOSTRAR LAS 15 TARJETAS (5 columnas × 3 filas)
+# CREAR TARJETAS (15 ELEMENTOS, 3 FILAS DE 5 COLUMNAS)
 # ==============================
 index = 0
 for fila in range(3):
-    cols = st.columns(5)
-    for col in cols:
+    col1, col2, col3, col4, col5 = st.columns(5)
+    for col in [col1, col2, col3, col4, col5]:
         if index < len(titles):
-            img_path = img_dir / images[index]
             with col:
-                if img_path.exists():
-                    st.markdown(
-                        f"""
-                        <div class="card">
-                            <img src="data:image/jpg;base64,{(img_path.read_bytes()).hex()}" alt="{titles[index]}">
-                            <h4>{titles[index]}</h4>
-                            <a href="{links[index]}" target="_blank">Enlace</a>
-                        </div>
-                        """,
-                        unsafe_allow_html=True
-                    )
-                else:
-                    st.warning(f"⚠ No se encontró la imagen: {images[index]}")
+                st.markdown(
+                    f"""
+                    <div class="card">
+                        <img src="{images[index]}" alt="{titles[index]}">
+                        <h4>{titles[index]}</h4>
+                        <a href="{links[index]}" target="_blank">Enlace</a>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
             index += 1
